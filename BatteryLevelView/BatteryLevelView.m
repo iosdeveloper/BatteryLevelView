@@ -52,7 +52,7 @@
 #ifdef TARGET_IPHONE_SIMULATOR
 		[self setImage:[UIImage imageNamed:@"BatteryBG_16.png"]];
 #else
-		float batteryLevel = lroundf([currentDevice batteryLevel] / 1.0 * 16.0);
+		float batteryLevel = lroundf([currentDevice batteryLevel] * 16.0);
 		
 		if (batteryLevel != -1.0) {
 			[self setImage:[UIImage imageNamed:[NSString stringWithFormat:@"BatteryBG_%.f", batteryLevel]]];
